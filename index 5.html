@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viva Yogurt</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#fffafc;
+    color:#333;
+}
+
+header{
+    background: linear-gradient(to right, #ffffff, #ffe6f2);
+    padding: 20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #0D6E7A;
+}
+
+.logo span{
+    color:#E86CC7;
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:20px;
+    color:#333;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#E86CC7;
+}
+
+.hero{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    color:#0D6E7A;
+}
+
+.hero h1 span{
+    color:#E86CC7;
+}
+
+.slogan{
+    font-size:22px;
+    color:#E86CC7;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#0D6E7A;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#E86CC7;
+}
+
+section{
+    padding:70px 8%;
+}
+
+h2{
+    text-align:center;
+    font-size:36px;
+    color:#0D6E7A;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.card h3{
+    color:#E86CC7;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+}
+
+button{
+    padding:15px;
+    border:none;
+    background:#E86CC7;
+    color:white;
+    border-radius:12px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0D6E7A;
+}
+
+.redes{
+    text-align:center;
+    background:#0D6E7A;
+    color:white;
+}
+
+.redes a{
+    display:inline-block;
+    margin:15px;
+    padding:12px 22px;
+    background:white;
+    color:#0D6E7A;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.redes a:hover{
+    background:#E86CC7;
+    color:white;
+}
+
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:20px;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">VIVA <span>YOGURT</span></div>
+
+    <nav>
+        <a href="#sabores">Sabores</a>
+        <a href="#registro">Registro</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Bienvenidos a <span>Viva Yogurt</span></h1>
+
+    <p class="slogan">
+        “Frescura, salud y bienestar en cada sorbo.”
+    </p>
+
+    <p>
+        Yogurt bebible natural, rico en calcio, vitaminas y probióticos que ayudan a la digestión,
+        fortalecen los huesos y mejoran tu bienestar diario.
+    </p>
+
+    <a href="#sabores" class="btn">Ver Sabores</a>
+</section>
+
+<section id="sabores">
+    <h2>Nuestros Yogurts Bebibles</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Fresa 🍓</h3>
+            <p>Rico en vitamina C, calcio y probióticos.</p>
+        </div>
+
+        <div class="card">
+            <h3>Durazno 🍑</h3>
+            <p>Con antioxidantes y beneficios digestivos.</p>
+        </div>
+    </div>
+</section>
+
+<section id="registro">
+    <h2>Regístrate</h2>
+
+    <form id="registroForm" action="https://formspree.io/f/meenqebg" method="POST">
+        <input type="text" name="Nombre" placeholder="Nombre completo" required>
+        <input type="email" name="Correo" placeholder="Correo electrónico" required>
+        <input type="password" name="Contraseña" placeholder="Contraseña" required>
+        
+        <button type="submit" id="btnEnviar">Crear cuenta</button>
+    </form>
+
+    <p id="mensaje" style="text-align:center; margin-top:15px; color:#0D6E7A;"></p>
+</section>
+
+<section id="contacto" class="redes">
+    <h2 style="color:white;">Síguenos</h2>
+
+    <a href="https://www.instagram.com/viva.yogurt?igsh=bXhnYzZ4a250MG5x" target="_blank">
+        Instagram
+    </a>
+
+    <a href="https://wa.me/529631809503?text=Hola,%20quiero%20información%20de%20Viva%20Yogurt" target="_blank">
+        WhatsApp
+    </a>
+</section>
+
+<a class="whatsapp-float" 
+href="https://wa.me/529631809503?text=Hola,%20quiero%20comprar%20yogurt" 
+target="_blank">💬</a>
+
+<footer>
+    © 2026 Viva Yogurt | Salud y bienestar 💖
+</footer>
+
+<script>
+const form = document.getElementById("registroForm");
+const btn = document.getElementById("btnEnviar");
+const mensaje = document.getElementById("mensaje");
+
+form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    btn.textContent = "Enviando...";
+    btn.disabled = true;
+
+    const data = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            btn.textContent = "Listo ✅";
+            mensaje.textContent = "Registro enviado correctamente 💖";
+            form.reset();
+        } else {
+            btn.textContent = "Error";
+            mensaje.textContent = "Hubo un problema, intenta de nuevo";
+        }
+
+    } catch (error) {
+        btn.textContent = "Error";
+        mensaje.textContent = "Error de conexión";
+    }
+});
+</script>
+
+</body>
+</html>
